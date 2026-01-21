@@ -1,0 +1,122 @@
+html {
+    background-color: #282b30;
+    font-family: "Exo 2", sans-serif;
+    color: #00ff00;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80ch;
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+}
+
+/* Nav Styles */
+.nav-links {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: #424549;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+}
+
+.nav-links a {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    /*margin: 0.5rem 1rem;*/
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #00ff00;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    background-color: #55585c;
+}
+
+/* Task Form Styles */
+.task-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.task-data h2, h3, p, pre {
+    margin: 0;
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #424549;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+}
+
+.task-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #424549;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #424549;
+    padding: 0.5rem;
+    padding-top: 0.5rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+}
+
+.task-form h3 {
+    margin-top: 0rem;
+    margin-bottom: 0.2rem;
+}
+
+.task-form input {
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    background-color: #55585c;
+    color: inherit;
+}
+
+.task-form input::placeholder {
+    color: #00ff00;
+}
+
+.task-form button {
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    width: fit-content;
+    background-color: #55585c;
+    color: #00ff00;
+    font-size: larger;
+    align-self: center;
+}

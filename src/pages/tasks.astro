@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import TasksComponant from "../componants/TasksComponant.astro"
+const pageTitle = "AlgoLab - Tasks"
+
+// load / decode task JSON here
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <TasksComponant title="Task 1" description="A very tasky description of the task" inputData="[123, 456, 789]" />
+</BaseLayout>

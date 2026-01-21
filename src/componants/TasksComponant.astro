@@ -1,0 +1,44 @@
+---
+const { title, description, inputData } = Astro.props;
+---
+
+<section>
+    <div class="task-data">
+        <div class="task-info">
+            <h2>{title}</h2>
+            <p>{description}</p>
+        </div>
+        <div class="task-input">
+            <h3>Your Input</h3>
+            <pre class="input-data">{inputData}</pre>
+        </div>
+
+        <form id="taskForm" class="task-form">
+            <h3>Your Answer</h3>
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter data here..."
+                required
+            />
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    import { evalInput } from "../scripts/evalInput.js";
+
+    const form = document.getElementById("taskForm");
+    const input = document.getElementById("taskInput");
+
+    form?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = (input as HTMLInputElement)?.value;
+        if (typeof evalInput === "function") {
+            evalInput(data);
+        } else {
+            console.error("evalInput function not found");
+        }
+    });
+</script>
